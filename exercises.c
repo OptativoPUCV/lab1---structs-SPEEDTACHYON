@@ -9,14 +9,41 @@ Ejercicio 1: Encuentra el Elemento Mayor
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
-int findMax(int arr[], int size) { return 0; }
+int findMax(int arr[], int size)
+{ 
+  int MAX =arr1[0];
+  for(int i=0, i<size,i++)
+  {
+      if(arr1[i]>MAX)
+    {
+      MAX=arr1[i];
+      
+    
+    }
+   
+    
+        
+  }
+  return MAX; 
+}
 
 /*
 Ejercicio 2: Invertir un Arreglo
 Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
-void reverseArray(int arr[], int size) {}
+void reverseArray(int arr[], int size) 
+{
+  int temp;
+  for(int i=0, i<size/2, i++)
+  {
+    temp=arr[i];
+    arr[i]=arr[size-i-1];
+    arr[size-i-1]=temp; 
+    
+        
+  }  
+}
 
 /*
 Ejercicio 3: Filtrar Números Pares
@@ -26,7 +53,34 @@ los números pares del arreglo original.
 newsize apunta a una dirección válida que no ha sido inicializada con nigún valor específico. 
 *newsize debe almacenar el tamaño del nuevo arreglo que se retorna.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { return NULL; }
+int *filterEvenNumbers(int arr[], int size, int *newSize) 
+{
+  int *newArr=NULL;
+  int count=0;
+  for(i=0,i<size,i++)
+    {
+      if(arr[i]%2==0)
+      {
+        count++;
+        
+      }
+    
+    }
+  newArr=(int*)malloc(count*sizeof(int));
+  int j=0;
+  for(i=0,i<size,i++)
+    {
+      if(arr[i]%2==0)
+      {
+        newArr[j]=arr[i];
+        
+      }
+    
+    }
+  *newSize=count;
+  return newArr; 
+  
+}
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
@@ -35,7 +89,41 @@ ordenados de menor a mayor y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado de menor a mayor.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {}
+                       int result[]) 
+{
+  int i=0,j=0,k=0;
+  while(i<size1 && j<size2)
+  {
+    if(arr1[i]<arr2[j])
+    {
+      result[k]=arr1[i];
+      i++;
+      k++;
+      
+    }
+    else
+      result[k]=arr2[j];
+      j++;
+      k++;
+    
+      
+  }
+  while(i<size1)
+    {
+      result[k]=arr1[i];
+      i++;
+      k++;
+      
+    }
+  while(j<size2)
+    {
+      result[k]=arr2[j];
+      j++;
+      k++;
+      
+    }
+  
+}
 
 /*
 Ejercicio 5: Comprobación de Ordenación
