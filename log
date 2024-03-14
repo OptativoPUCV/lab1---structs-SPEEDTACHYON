@@ -415,3 +415,86 @@ exercises.c:31:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 a61d538
+Thu 14 Mar 2024 09:00:50 PM UTC: 
+ exercises.c | 9 ++++++++-
+ 1 file changed, 8 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘findMax’:
+exercises.c:15:12: error: ‘arr1’ undeclared (first use in this function); did you mean ‘arr’?
+   15 |   int MAX =arr1[0];
+      |            ^~~~
+      |            arr
+exercises.c:15:12: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:17:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+   17 |   for(int i=0, i<size,i++)
+      |                 ^
+exercises.c:30:3: error: expected expression before ‘return’
+   30 |   return MAX;
+      |   ^~~~~~
+exercises.c:31:1: error: expected expression before ‘}’ token
+   31 | }
+      | ^
+exercises.c:31:1: error: expected expression before ‘}’ token
+exercises.c:17:11: error: unused variable ‘i’ [-Werror=unused-variable]
+   17 |   for(int i=0, i<size,i++)
+      |           ^
+exercises.c:15:7: error: unused variable ‘MAX’ [-Werror=unused-variable]
+   15 |   int MAX =arr1[0];
+      |       ^~~
+exercises.c: In function ‘reverseArray’:
+exercises.c:41:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+   41 |   for(int i=0, i<size/2, i++)
+      |                 ^
+exercises.c:49:1: error: expected expression before ‘}’ token
+   49 | }
+      | ^
+exercises.c:49:1: error: expected expression before ‘}’ token
+exercises.c:49:1: error: expected expression before ‘}’ token
+exercises.c:41:11: error: unused variable ‘i’ [-Werror=unused-variable]
+   41 |   for(int i=0, i<size/2, i++)
+      |           ^
+exercises.c:40:7: error: unused variable ‘temp’ [-Werror=unused-variable]
+   40 |   int temp;
+      |       ^~~~
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:63:7: error: ‘i’ undeclared (first use in this function)
+   63 |   for(i=0,i<size,i++)
+      |       ^
+exercises.c:63:10: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   63 |   for(i=0,i<size,i++)
+      |          ^
+exercises.c:63:17: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   63 |   for(i=0,i<size,i++)
+      |                 ^
+exercises.c:63:21: error: expected ‘;’ before ‘)’ token
+   63 |   for(i=0,i<size,i++)
+      |                     ^
+      |                     ;
+exercises.c:63:21: error: expected expression before ‘)’ token
+exercises.c:74:10: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   74 |   for(i=0,i<size,i++)
+      |          ^
+exercises.c:74:17: error: left-hand operand of comma expression has no effect [-Werror=unused-value]
+   74 |   for(i=0,i<size,i++)
+      |                 ^
+exercises.c:74:21: error: expected ‘;’ before ‘)’ token
+   74 |   for(i=0,i<size,i++)
+      |                     ^
+      |                     ;
+exercises.c:74:21: error: expected expression before ‘)’ token
+exercises.c: In function ‘checkSorted’:
+exercises.c:142:10: error: right-hand operand of comma expression has no effect [-Werror=unused-value]
+  142 |   for(i=0,i<size-1,i++)
+      |          ^
+exercises.c:142:23: error: expected ‘;’ before ‘)’ token
+  142 |   for(i=0,i<size-1,i++)
+      |                       ^
+      |                       ;
+exercises.c:142:23: error: expected expression before ‘)’ token
+exercises.c: In function ‘findMax’:
+exercises.c:31:1: error: control reaches end of non-void function [-Werror=return-type]
+   31 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+61bf245
