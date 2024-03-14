@@ -61,25 +61,25 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
   int *newArr=NULL;
   int count=0;
   for(i=0,i<size,i++)
-    {
+  {
       if(arr[i]%2==0)
       {
         count++;
         
       }
     
-    }
+  }
   newArr=(int*)malloc(count*sizeof(int));
   int j=0;
   for(i=0,i<size,i++)
-    {
+  {
       if(arr[i]%2==0)
       {
         newArr[j]=arr[i];
         
       }
     
-    }
+  }
   *newSize=count;
   return newArr; 
   
@@ -114,19 +114,19 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
       
   }
   while(i<size1)
-    {
+  {
       result[k]=arr1[i];
       i++;
       k++;
       
-    }
+  }
   while(j<size2)
-    {
+  {
       result[k]=arr2[j];
       j++;
       k++;
       
-    }
+  }
   
 }
 
@@ -136,7 +136,18 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) { return -2; }
+int checkSorted(int arr[], int size) 
+{ 
+  int i;
+  for(i=0,i<size-1,i++)
+  {
+      if(arr[i]>arr[i+1])
+      {
+        return 0;
+      }
+  }
+  return -2; 
+}
 
 /*
 Ejercicio 6: Información de una Biblioteca
