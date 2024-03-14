@@ -14,7 +14,7 @@ int findMax(int arr[], int size)
   
   int MAX =arr1[0];
   
-  for(int i=0, i<size,i++)
+  for(int i=0; i<size;i++)
   {
       if(arr1[i]>MAX)
     {
@@ -38,7 +38,7 @@ invierta el orden de sus elementos.
 void reverseArray(int arr[], int size) 
 {
   int temp;
-  for(int i=0, i<size/2, i++)
+  for(int i=0; i<size/2; i++)
   {
     temp=arr[i];
     arr[i]=arr[size-i-1];
@@ -60,7 +60,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
 {
   int *newArr=NULL;
   int count=0;
-  for(i=0,i<size,i++)
+  for(i=0;i<size;i++)
   {
       if(arr[i]%2==0)
       {
@@ -71,7 +71,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
   }
   newArr=(int*)malloc(count*sizeof(int));
   int j=0;
-  for(i=0,i<size,i++)
+  for(i=0;i<size;i++)
   {
       if(arr[i]%2==0)
       {
@@ -139,7 +139,7 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) 
 { 
   int i;
-  for(i=0,i<size-1,i++)
+  for(i=0;i<size-1;i++)
   {
       if(arr[i]>arr[i+1])
       {
@@ -195,4 +195,16 @@ typedef struct nodo {
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
-Nodo *crearListaEnlazada(int arr[], int size) { return NULL; }
+Nodo *crearListaEnlazada(int arr[], int size) 
+{ 
+  Nodo *cabeza = NULL;
+  Nodo *ultimo = NULL;
+  for(int i=0, i<size, i++)
+  {
+      Nodo *nuevoNodo = (Nodo *)malloc(sizeof(Nodo));
+    
+    
+    
+  }
+  return NULL; 
+}

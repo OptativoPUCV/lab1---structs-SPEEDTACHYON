@@ -498,3 +498,43 @@ exercises.c:31:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 61bf245
+Thu 14 Mar 2024 09:06:33 PM UTC: 
+ exercises.c | 24 ++++++++++++++++++------
+ 1 file changed, 18 insertions(+), 6 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘findMax’:
+exercises.c:15:12: error: ‘arr1’ undeclared (first use in this function); did you mean ‘arr’?
+   15 |   int MAX =arr1[0];
+      |            ^~~~
+      |            arr
+exercises.c:15:12: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:63:7: error: ‘i’ undeclared (first use in this function)
+   63 |   for(i=0;i<size;i++)
+      |       ^
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:202:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+  202 |   for(int i=0, i<size, i++)
+      |                 ^
+exercises.c:209:3: error: expected expression before ‘return’
+  209 |   return NULL;
+      |   ^~~~~~
+exercises.c:210:1: error: expected expression before ‘}’ token
+  210 | }
+      | ^
+exercises.c:210:1: error: expected expression before ‘}’ token
+exercises.c:202:11: error: unused variable ‘i’ [-Werror=unused-variable]
+  202 |   for(int i=0, i<size, i++)
+      |           ^
+exercises.c:201:9: error: unused variable ‘ultimo’ [-Werror=unused-variable]
+  201 |   Nodo *ultimo = NULL;
+      |         ^~~~~~
+exercises.c:200:9: error: unused variable ‘cabeza’ [-Werror=unused-variable]
+  200 |   Nodo *cabeza = NULL;
+      |         ^~~~~~
+exercises.c:210:1: error: control reaches end of non-void function [-Werror=return-type]
+  210 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+7d50695
