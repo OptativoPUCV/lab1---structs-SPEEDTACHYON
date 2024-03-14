@@ -652,3 +652,33 @@ exercises.c:233:1: error: control reaches end of non-void function [-Werror=retu
 cc1: all warnings being treated as errors
 Compilation failed
 40163f6
+Thu 14 Mar 2024 09:13:29 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:211:17: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+  211 |   for(int i=0, i<size, i++)
+      |                 ^
+exercises.c:232:3: error: expected expression before ‘return’
+  232 |   return cabeza;
+      |   ^~~~~~
+exercises.c:233:1: error: expected expression before ‘}’ token
+  233 | }
+      | ^
+exercises.c:233:1: error: expected expression before ‘}’ token
+exercises.c:211:11: error: unused variable ‘i’ [-Werror=unused-variable]
+  211 |   for(int i=0, i<size, i++)
+      |           ^
+exercises.c:210:9: error: unused variable ‘ultimo’ [-Werror=unused-variable]
+  210 |   Nodo *ultimo = NULL;
+      |         ^~~~~~
+exercises.c:209:9: error: unused variable ‘cabeza’ [-Werror=unused-variable]
+  209 |   Nodo *cabeza = NULL;
+      |         ^~~~~~
+exercises.c:233:1: error: control reaches end of non-void function [-Werror=return-type]
+  233 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+13a3a40
